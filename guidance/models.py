@@ -56,7 +56,7 @@ class MentorProfile(models.Model):
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"{self.user.get_full_name() or self.user.username} ({self.primary_subject}) - ₹{self.wallet_balance}"
+        return f"{self.user.get_full_name() or self.user.username} ({self.subject_specialty}) - ₹{self.wallet_balance}"
 
 
 class DoubtTicket(models.Model):
